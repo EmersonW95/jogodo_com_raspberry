@@ -59,29 +59,29 @@ numero_botao_pin6 = 6
 numero_botao_pin7 = 7
 numero_botao_pin8 = 8
 
-while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8:
+while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8_dente_errado:
     numero_pin1 = randint(1,8)
 
-while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8:
+while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8_dente_errado:
     numero_pin2 = randint(1,8)
 
-while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8:
+while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8_dente_errado:
     numero_pin3 = randint(1,8)
 
-while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8:
+while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8_dente_errado:
     numero_pin4 = randint(1,8)
 
-while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8:
+while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8_dente_errado:
     numero_pin5 = randint(1,8)
 
-while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8:
+while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8_dente_errado:
     numero_pin6 = randint(1,8)
 
-while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8:
+while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8_dente_errado:
     numero_pin7 = randint(1,8)
 
-while numero_pin8 == numero_pin1 or numero_pin8 == numero_pin2 or numero_pin8 == numero_pin3 or numero_pin8 == numero_pin4 or numero_pin8 == numero_pin5 or numero_pin8 == numero_pin6 or numero_pin8 == numero_pin7:
-    numero_pin8 = randint(1,8)
+while numero_pin8_dente_errado == numero_pin1 or numero_pin8_dente_errado == numero_pin2 or numero_pin8_dente_errado == numero_pin3 or numero_pin8_dente_errado == numero_pin4 or numero_pin8_dente_errado == numero_pin5 or numero_pin8_dente_errado == numero_pin6 or numero_pin8_dente_errado == numero_pin7:
+    numero_pin8_dente_errado = randint(1,8)
 
 print('CARREGANDO', end='')
 sleep(1)
@@ -1183,29 +1183,29 @@ while True:
         numero_botao_pin7 = 7
         numero_botao_pin8 = 8
 
-        while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8:
+        while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8_dente_errado:
             numero_pin1 = randint(1,8)
 
-        while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8:
+        while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8_dente_errado:
             numero_pin2 = randint(1,8)
 
-        while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8:
+        while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8_dente_errado:
             numero_pin3 = randint(1,8)
 
-        while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8:
+        while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8_dente_errado:
             numero_pin4 = randint(1,8)
 
-        while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8:
+        while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8_dente_errado:
             numero_pin5 = randint(1,8)
 
-        while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8:
+        while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8_dente_errado:
             numero_pin6 = randint(1,8)
 
-        while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8:
+        while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8_dente_errado:
             numero_pin7 = randint(1,8)
 
-        while numero_pin8 == numero_pin1 or numero_pin8 == numero_pin2 or numero_pin8 == numero_pin3 or numero_pin8 == numero_pin4 or numero_pin8 == numero_pin5 or numero_pin8 == numero_pin6 or numero_pin8 == numero_pin7:
-            numero_pin8 = randint(1,8)
+        while numero_pin8_dente_errado == numero_pin1 or numero_pin8_dente_errado == numero_pin2 or numero_pin8_dente_errado == numero_pin3 or numero_pin8_dente_errado == numero_pin4 or numero_pin8_dente_errado == numero_pin5 or numero_pin8_dente_errado == numero_pin6 or numero_pin8_dente_errado == numero_pin7:
+            numero_pin8_dente_errado = randint(1,8)
 
 
         print('CARREGANDO', end='')
