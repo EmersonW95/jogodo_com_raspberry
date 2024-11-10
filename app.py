@@ -144,7 +144,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -162,7 +162,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -180,7 +180,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -198,7 +198,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -216,7 +216,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -234,7 +234,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -277,7 +277,7 @@ if botao == '':
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -314,7 +314,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-    
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin3:
             GPIO.output(led_PIN3, GPIO.HIGH)
             sleep(0.5)
@@ -331,7 +331,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -367,7 +367,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -403,7 +403,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -428,7 +428,7 @@ if botao == '':
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -446,7 +446,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -464,7 +464,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -482,7 +482,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -500,7 +500,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -518,7 +518,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -536,7 +536,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -579,7 +579,7 @@ if botao == '':
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -597,7 +597,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -615,7 +615,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -633,7 +633,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -651,7 +651,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -669,7 +669,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -687,7 +687,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -730,7 +730,7 @@ if botao == '':
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -766,7 +766,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -784,7 +784,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -802,7 +802,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -820,7 +820,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -838,7 +838,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -856,7 +856,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -881,7 +881,7 @@ if botao == '':
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -917,7 +917,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -935,7 +935,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -953,7 +953,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -971,7 +971,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -989,7 +989,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -1007,7 +1007,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -1050,7 +1050,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -1068,7 +1068,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -1086,7 +1086,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -1104,7 +1104,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -1122,7 +1122,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -1140,7 +1140,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -1176,14 +1176,14 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == dente_errado:
             print('VOCÊ ERROU')
             print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -1201,7 +1201,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -1219,7 +1219,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -1237,7 +1237,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -1255,7 +1255,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -1273,7 +1273,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -1291,7 +1291,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -1309,7 +1309,7 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -1546,7 +1546,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -1564,7 +1564,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -1582,7 +1582,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -1600,7 +1600,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -1618,7 +1618,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -1636,7 +1636,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-            
+
         elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -1716,7 +1716,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-    
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin3:
             GPIO.output(led_PIN3, GPIO.HIGH)
             sleep(0.5)
@@ -1733,7 +1733,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -1751,7 +1751,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -1769,7 +1769,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -1805,7 +1805,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -1830,7 +1830,7 @@ while True:
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -1848,7 +1848,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -1866,7 +1866,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -1884,7 +1884,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -1902,7 +1902,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -1920,7 +1920,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -1938,7 +1938,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -1981,7 +1981,7 @@ while True:
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -1999,7 +1999,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -2017,7 +2017,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -2035,7 +2035,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -2053,7 +2053,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -2071,7 +2071,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -2089,7 +2089,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -2132,7 +2132,7 @@ while True:
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -2168,7 +2168,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -2186,7 +2186,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -2204,7 +2204,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -2222,7 +2222,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -2240,7 +2240,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -2258,7 +2258,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -2283,7 +2283,7 @@ while True:
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -2319,7 +2319,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -2337,7 +2337,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -2355,7 +2355,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -2373,7 +2373,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -2391,7 +2391,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -2409,7 +2409,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
@@ -2452,7 +2452,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -2470,7 +2470,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -2488,7 +2488,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -2506,7 +2506,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -2524,7 +2524,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -2542,7 +2542,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -2578,14 +2578,14 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == dente_errado:
             print('VOCÊ ERROU')
             print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
             break
-        
+
         if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN1, GPIO.HIGH)
@@ -2603,7 +2603,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin2:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN2, GPIO.HIGH)
@@ -2621,7 +2621,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin3:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN3, GPIO.HIGH)
@@ -2639,7 +2639,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin4:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN4, GPIO.HIGH)
@@ -2657,7 +2657,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin5:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN5, GPIO.HIGH)
@@ -2675,7 +2675,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin6:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN6, GPIO.HIGH)
@@ -2693,7 +2693,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin7:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN7, GPIO.HIGH)
@@ -2711,7 +2711,7 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
+
         elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin8:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
             GPIO.output(led_PIN8, GPIO.HIGH)
