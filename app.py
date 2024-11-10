@@ -30,7 +30,8 @@ numero_pin4 = randint(1,8)
 numero_pin5 = randint(1,8)
 numero_pin6 = randint(1,8)
 numero_pin7 = randint(1,8)
-numero_pin8_dente_errado = randint(1,8)
+numero_pin8 = randint(1,8)
+dente_errado = randint(1,8)
 
 botao_pin1 = 21
 botao_pin2 = 22
@@ -59,29 +60,29 @@ numero_botao_pin6 = 6
 numero_botao_pin7 = 7
 numero_botao_pin8 = 8
 
-while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8_dente_errado:
+while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8:
     numero_pin1 = randint(1,8)
 
-while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8_dente_errado:
+while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8:
     numero_pin2 = randint(1,8)
 
-while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8_dente_errado:
+while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8:
     numero_pin3 = randint(1,8)
 
-while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8_dente_errado:
+while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8:
     numero_pin4 = randint(1,8)
 
-while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8_dente_errado:
+while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8:
     numero_pin5 = randint(1,8)
 
-while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8_dente_errado:
+while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8:
     numero_pin6 = randint(1,8)
 
-while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8_dente_errado:
+while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8:
     numero_pin7 = randint(1,8)
 
-while numero_pin8_dente_errado == numero_pin1 or numero_pin8_dente_errado == numero_pin2 or numero_pin8_dente_errado == numero_pin3 or numero_pin8_dente_errado == numero_pin4 or numero_pin8_dente_errado == numero_pin5 or numero_pin8_dente_errado == numero_pin6 or numero_pin8_dente_errado == numero_pin7:
-    numero_pin8_dente_errado = randint(1,8)
+while numero_pin8 == numero_pin1 or numero_pin8 == numero_pin2 or numero_pin8 == numero_pin3 or numero_pin8 == numero_pin4 or numero_pin8 == numero_pin5 or numero_pin8 == numero_pin6 or numero_pin8 == numero_pin7:
+    numero_pin8 = randint(1,8)
 
 print('CARREGANDO', end='')
 sleep(1)
@@ -117,6 +118,13 @@ if botao == '':
         GPIO.output(led_PIN6, GPIO.LOW)
         GPIO.output(led_PIN7, GPIO.LOW)
         GPIO.output(led_PIN8, GPIO.LOW)
+
+        if GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == dente_errado:
+            print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
+            tentativas += 1
+            acertos -=1
+            break
 
         if GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
@@ -244,12 +252,30 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
-        elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin8_dente_errado:
+
+        elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1    
+
+        if GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin1:
@@ -378,11 +404,29 @@ if botao == '':
             tentativas += 1
             acertos += 1
         
-        elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin8_dente_errado:
+        elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin1:
@@ -511,11 +555,29 @@ if botao == '':
             tentativas += 1
             acertos += 1
 
-        elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin8_dente_errado:
+        elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin1:
@@ -643,12 +705,30 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
-        
-        elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin8_dente_errado:
+
+        elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin1:
@@ -777,11 +857,29 @@ if botao == '':
             tentativas += 1
             acertos += 1
         
-        elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin8_dente_errado:
+        elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin1:
@@ -909,12 +1007,30 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
+        
+        elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
 
-        elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin8_dente_errado:
+        if GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
 
         if GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin1:
@@ -1042,13 +1158,175 @@ if botao == '':
             
             tentativas += 1
             acertos += 1
+
+        elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
         
-        elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin8_dente_errado:
+        if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
+        
+        if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin1:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN1, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin2:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN2, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin3:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN3, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin4:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN4, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin5:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN5, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin6:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN6, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin7:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN7, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
 
         if acertos == 7:
             print('-'*36)
@@ -1155,6 +1433,7 @@ while True:
         numero_pin6 = randint(1,8)
         numero_pin7 = randint(1,8)
         numero_pin8 = randint(1,8)
+        dente_errado = randint(1,8)
 
         botao_pin1 = 21
         botao_pin2 = 22
@@ -1183,29 +1462,29 @@ while True:
         numero_botao_pin7 = 7
         numero_botao_pin8 = 8
 
-        while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8_dente_errado:
+        while numero_pin1 == numero_pin2 or numero_pin1 == numero_pin3 or numero_pin1 == numero_pin4 or numero_pin1 == numero_pin5 or numero_pin1 == numero_pin6 or numero_pin1 == numero_pin7 or numero_pin1 == numero_pin8:
             numero_pin1 = randint(1,8)
 
-        while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8_dente_errado:
+        while numero_pin2 == numero_pin1 or numero_pin2 == numero_pin3 or numero_pin2 == numero_pin4 or numero_pin2 == numero_pin5 or numero_pin2 == numero_pin6 or numero_pin2 == numero_pin7 or numero_pin2 == numero_pin8:
             numero_pin2 = randint(1,8)
 
-        while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8_dente_errado:
+        while numero_pin3 == numero_pin1 or numero_pin3 == numero_pin2 or numero_pin3 == numero_pin4 or numero_pin3 == numero_pin5 or numero_pin3 == numero_pin6 or numero_pin3 == numero_pin7 or numero_pin3 == numero_pin8:
             numero_pin3 = randint(1,8)
 
-        while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8_dente_errado:
+        while numero_pin4 == numero_pin1 or numero_pin4 == numero_pin2 or numero_pin4 == numero_pin3 or numero_pin4 == numero_pin5 or numero_pin4 == numero_pin6 or numero_pin4 == numero_pin7 or numero_pin4 == numero_pin8:
             numero_pin4 = randint(1,8)
 
-        while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8_dente_errado:
+        while numero_pin5 == numero_pin1 or numero_pin5 == numero_pin2 or numero_pin5 == numero_pin3 or numero_pin5 == numero_pin4 or numero_pin5 == numero_pin6 or numero_pin5 == numero_pin7 or numero_pin5 == numero_pin8:
             numero_pin5 = randint(1,8)
 
-        while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8_dente_errado:
+        while numero_pin6 == numero_pin1 or numero_pin6 == numero_pin2 or numero_pin6 == numero_pin3 or numero_pin6 == numero_pin4 or numero_pin6 == numero_pin5 or numero_pin6 == numero_pin7 or numero_pin6 == numero_pin8:
             numero_pin6 = randint(1,8)
 
-        while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8_dente_errado:
+        while numero_pin7 == numero_pin1 or numero_pin7 == numero_pin2 or numero_pin7 == numero_pin3 or numero_pin7 == numero_pin4 or numero_pin7 == numero_pin5 or numero_pin7 == numero_pin6 or numero_pin7 == numero_pin8:
             numero_pin7 = randint(1,8)
 
-        while numero_pin8_dente_errado == numero_pin1 or numero_pin8_dente_errado == numero_pin2 or numero_pin8_dente_errado == numero_pin3 or numero_pin8_dente_errado == numero_pin4 or numero_pin8_dente_errado == numero_pin5 or numero_pin8_dente_errado == numero_pin6 or numero_pin8_dente_errado == numero_pin7:
-            numero_pin8_dente_errado = randint(1,8)
+        while numero_pin8 == numero_pin1 or numero_pin8 == numero_pin2 or numero_pin8 == numero_pin3 or numero_pin8 == numero_pin4 or numero_pin8 == numero_pin5 or numero_pin8 == numero_pin6 or numero_pin8 == numero_pin7:
+            numero_pin8 = randint(1,8)
 
 
         print('CARREGANDO', end='')
@@ -1241,6 +1520,13 @@ while True:
         GPIO.output(led_PIN6, GPIO.LOW)
         GPIO.output(led_PIN7, GPIO.LOW)
         GPIO.output(led_PIN8, GPIO.LOW)
+
+        if GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == dente_errado:
+            print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
+            tentativas += 1
+            acertos -=1
+            break
 
         if GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin1:
             print('PARABÉNS VOCÊ ACERTOU UM DENTE')
@@ -1368,12 +1654,30 @@ while True:
             
             tentativas += 1
             acertos += 1
-        
-        elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin8_dente_errado:
+
+        elif GPIO.input(botao_pin1) == GPIO.HIGH and numero_botao_pin1 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1    
+
+        if GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin1:
@@ -1502,11 +1806,29 @@ while True:
             tentativas += 1
             acertos += 1
         
-        elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin8_dente_errado:
+        elif GPIO.input(botao_pin2) == GPIO.HIGH and numero_botao_pin2 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin1:
@@ -1635,11 +1957,29 @@ while True:
             tentativas += 1
             acertos += 1
 
-        elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin8_dente_errado:
+        elif GPIO.input(botao_pin3) == GPIO.HIGH and numero_botao_pin3 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin1:
@@ -1768,8 +2108,29 @@ while True:
             tentativas += 1
             acertos += 1
 
-        else:
+        elif GPIO.input(botao_pin4) == GPIO.HIGH and numero_botao_pin4 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == dente_errado:
+            print('VOCÊ ERROU')
             print('VOCÊ PERDEU')
+            tentativas += 1
+            acertos -=1
             break
         
         if GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin1:
@@ -1898,11 +2259,29 @@ while True:
             tentativas += 1
             acertos += 1
         
-        elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin8_dente_errado:
+        elif GPIO.input(botao_pin5) == GPIO.HIGH and numero_botao_pin5 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+
+        if GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
         
         if GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin1:
@@ -2030,12 +2409,30 @@ while True:
             
             tentativas += 1
             acertos += 1
+        
+        elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
 
-        elif GPIO.input(botao_pin6) == GPIO.HIGH and numero_botao_pin6 == numero_pin8_dente_errado:
+        if GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
 
         if GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin1:
@@ -2163,13 +2560,175 @@ while True:
             
             tentativas += 1
             acertos += 1
+
+        elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
         
-        elif GPIO.input(botao_pin7) == GPIO.HIGH and numero_botao_pin7 == numero_pin8_dente_errado:
+        if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == dente_errado:
             print('VOCÊ ERROU')
+            print('VOCÊ PERDEU')
             tentativas += 1
             acertos -=1
-            print('VOCÊ PERDEU')
             break
+        
+        if GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin1:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN1, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN1, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin2:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN2, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN2, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin3:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN3, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN3, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin4:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN4, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN4, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin5:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN5, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN5, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin6:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN6, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN6, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin7:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN7, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN7, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
+        
+        elif GPIO.input(botao_pin8) == GPIO.HIGH and numero_botao_pin8 == numero_pin8:
+            print('PARABÉNS VOCÊ ACERTOU UM DENTE')
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.HIGH)
+            sleep(0.5)
+            GPIO.output(led_PIN8, GPIO.LOW)
+            sleep(0.5)
+            
+            tentativas += 1
+            acertos += 1
 
         if acertos == 7:
             print('PARABÉNS VOCÊ GANHOU')
